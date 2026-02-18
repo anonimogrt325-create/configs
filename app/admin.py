@@ -1,0 +1,1 @@
+from django.contrib import admin\nfrom .models import Product\n\nclass ProductAdmin(admin.ModelAdmin):\n    list_display = ('id', 'name', 'price', 'created_at')\n    search_fields = ('name',)\n    list_filter = ('category',)\n\nadmin.site.register(Product, ProductAdmin)\n
